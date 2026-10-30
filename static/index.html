@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acme Resorts — Plan Your Adventure</title>
+  <meta name="description" content="Four resorts, one magical trip. Plan, book, and get 30 days of Acme+ streaming included — chat with Sam, your Acme Guest Services concierge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/widget.css">
+  <link rel="stylesheet" href="/static/site.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <a class="site-wordmark" href="#top" aria-label="Acme Resorts home">
+      <svg class="site-logo" viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffc93c"/>
+            <stop offset="55%" stop-color="#ff5da2"/>
+            <stop offset="100%" stop-color="#7c3aed"/>
+          </linearGradient>
+        </defs>
+        <path d="M20 2 L23.8 15.2 L37 15.2 L26.4 22.9 L30.2 36 L20 28.2 L9.8 36 L13.6 22.9 L3 15.2 L16.2 15.2 Z"
+              fill="url(#logoGrad)" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/>
+      </svg>
+      <span>Acme Resorts</span>
+    </a>
+    <nav class="site-links">
+      <a href="#resorts">Resorts</a>
+      <a href="#acme-plus">Acme+</a>
+      <a href="#offers">Offers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn btn-primary site-book-btn" type="button" data-open-sam>Book now</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">✦ Four resorts. Endless magic. ✦</p>
+        <h1>Where the Magic Happens</h1>
+        <p class="hero-sub">
+          Coastal sunrises, alpine air, kingdom-sized fun, and studio-lot energy — pick your
+          resort and let Sam handle the rest. Every confirmed booking includes 30 days of
+          Acme+ streaming, on us.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" type="button" data-open-sam>Chat with Sam</button>
+          <a class="btn btn-ghost btn-lg" href="#resorts">See resorts</a>
+        </div>
+        <ul class="hero-badges">
+          <li>✦ 4 resorts</li>
+          <li>✦ 3 room types</li>
+          <li>✦ 30 days Acme+ included</li>
+        </ul>
+      </div>
+
+      <!-- Scene band sits BELOW the copy in normal document flow (not
+           absolutely positioned behind it), so the castle/fireworks
+           artwork can never overlap the hero text regardless of viewport
+           size. The sky gradient lives on .hero itself (site.css) and
+           shows through this SVG's transparent background — one
+           continuous sky behind both the copy and the scene. -->
+      <div class="hero-scene" aria-hidden="true">
+        <svg viewBox="0 0 800 420" preserveAspectRatio="xMidYMax meet" width="100%" height="100%">
+          <defs>
+            <linearGradient id="hillGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2f6b4f"/>
+              <stop offset="100%" stop-color="#1c4a34"/>
+            </linearGradient>
+            <radialGradient id="burst1" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fff6d8"/>
+              <stop offset="40%" stop-color="#ffc93c" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#ffc93c" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="burst2" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fff"/>
+              <stop offset="40%" stop-color="#4fd6c8" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#4fd6c8" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="burst3" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fff"/>
+              <stop offset="40%" stop-color="#ff7ab8" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#ff7ab8" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- fireworks -->
+          <g class="fw fw-a"><circle cx="140" cy="90" r="70" fill="url(#burst1)"/></g>
+          <g class="fw fw-b"><circle cx="640" cy="70" r="85" fill="url(#burst2)"/></g>
+          <g class="fw fw-c"><circle cx="420" cy="50" r="60" fill="url(#burst3)"/></g>
+
+          <!-- twinkling stars -->
+          <g fill="#fff">
+            <circle class="star star-1" cx="70" cy="150" r="2.4"/>
+            <circle class="star star-2" cx="220" cy="60" r="2"/>
+            <circle class="star star-3" cx="330" cy="130" r="2.2"/>
+            <circle class="star star-4" cx="520" cy="150" r="2"/>
+            <circle class="star star-5" cx="600" cy="180" r="2.6"/>
+            <circle class="star star-6" cx="730" cy="120" r="2.2"/>
+            <circle class="star star-1" cx="380" cy="40" r="1.8"/>
+            <circle class="star star-3" cx="760" cy="60" r="2"/>
+          </g>
+
+          <!-- distant hill -->
+          <path d="M0 300 Q160 270 320 300 T640 300 T800 290 V420 H0 Z" fill="url(#hillGrad)" opacity="0.9"/>
+
+          <!-- castle silhouette -->
+          <g class="castle">
+            <!-- side towers -->
+            <rect x="180" y="255" width="34" height="90" fill="#4b2e83"/>
+            <polygon points="180,255 214,255 197,220" fill="#ff5da2"/>
+            <rect x="590" y="255" width="34" height="90" fill="#4b2e83"/>
+            <polygon points="590,255 624,255 607,220" fill="#4fd6c8"/>
+
+            <!-- main keep -->
+            <rect x="260" y="230" width="280" height="115" fill="#5c37a6"/>
+            <rect x="260" y="230" width="280" height="10" fill="#4b2e83"/>
+            <!-- crenellations -->
+            <g fill="#4b2e83">
+              <rect x="260" y="220" width="14" height="14"/>
+              <rect x="288" y="220" width="14" height="14"/>
+              <rect x="316" y="220" width="14" height="14"/>
+              <rect x="344" y="220" width="14" height="14"/>
+              <rect x="372" y="220" width="14" height="14"/>
+              <rect x="400" y="220" width="14" height="14"/>
+              <rect x="428" y="220" width="14" height="14"/>
+              <rect x="456" y="220" width="14" height="14"/>
+              <rect x="484" y="220" width="14" height="14"/>
+              <rect x="512" y="220" width="14" height="14"/>
+            </g>
+
+            <!-- gate -->
+            <path d="M380 345 V290 Q400 265 420 290 V345 Z" fill="#2b1a4d"/>
+
+            <!-- corner turrets with cones -->
+            <rect x="250" y="200" width="26" height="60" fill="#6a3fbf"/>
+            <polygon points="250,200 276,200 263,168" fill="#ffc93c"/>
+            <rect x="524" y="200" width="26" height="60" fill="#6a3fbf"/>
+            <polygon points="524,200 550,200 537,168" fill="#ff5da2"/>
+
+            <!-- center keep tower -->
+            <rect x="370" y="140" width="60" height="100" fill="#7248c9"/>
+            <polygon points="370,140 430,140 400,90" fill="#4fd6c8"/>
+            <rect x="396" y="80" width="8" height="18" fill="#4fd6c8"/>
+            <polygon class="flag" points="404,80 404,66 420,73" fill="#ffc93c"/>
+
+            <!-- windows -->
+            <g class="windows" fill="#ffe58a">
+              <rect x="392" y="165" width="16" height="20" rx="8"/>
+              <circle cx="263" cy="220" r="5"/>
+              <circle cx="537" cy="220" r="5"/>
+              <rect x="290" y="270" width="10" height="14" rx="5"/>
+              <rect x="330" y="270" width="10" height="14" rx="5"/>
+              <rect x="460" y="270" width="10" height="14" rx="5"/>
+              <rect x="500" y="270" width="10" height="14" rx="5"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section id="resorts" class="resorts">
+      <h2>Plan your adventure</h2>
+      <p class="section-sub">Every room type, at every resort, starting from $289/night.</p>
+      <div class="resort-grid">
+
+        <article class="resort-card resort-kingdom">
+          <div class="resort-art" aria-hidden="true">
+            <svg viewBox="0 0 120 60" width="100%" height="100%">
+              <polygon points="30,50 30,26 45,10 60,26 60,50" fill="#fff" opacity="0.9"/>
+              <polygon points="45,10 60,26 30,26" fill="#fff" opacity="0.55"/>
+              <circle cx="80" cy="18" r="10" fill="#fff" opacity="0.85"/>
+            </svg>
+          </div>
+          <div class="resort-body">
+            <span class="resort-badge">Signature</span>
+            <h3>Acme Magic Kingdom Resort</h3>
+            <p class="resort-vibe">Parades, fireworks, and a lobby that smells like fresh waffle cones.</p>
+            <p class="resort-rooms">Standard &middot; Suite &middot; Villa</p>
+            <p class="resort-rate">From $289/night</p>
+            <button class="btn btn-mini" type="button" data-open-sam>Check availability</button>
+          </div>
+        </article>
+
+        <article class="resort-card resort-coastal">
+          <div class="resort-art" aria-hidden="true">
+            <svg viewBox="0 0 120 60" width="100%" height="100%">
+              <path d="M0 40 Q15 30 30 40 T60 40 T90 40 T120 40 V60 H0 Z" fill="#fff" opacity="0.85"/>
+              <circle cx="90" cy="16" r="11" fill="#fff" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="resort-body">
+            <span class="resort-badge">Beachfront</span>
+            <h3>Acme Coastal Resort</h3>
+            <p class="resort-vibe">Barefoot boardwalks, sunset cabanas, and a pool that never closes.</p>
+            <p class="resort-rooms">Standard &middot; Suite &middot; Villa</p>
+            <p class="resort-rate">From $289/night</p>
+            <button class="btn btn-mini" type="button" data-open-sam>Check availability</button>
+          </div>
+        </article>
+
+        <article class="resort-card resort-alpine">
+          <div class="resort-art" aria-hidden="true">
+            <svg viewBox="0 0 120 60" width="100%" height="100%">
+              <polygon points="20,50 38,20 56,50" fill="#fff" opacity="0.9"/>
+              <polygon points="55,50 75,14 95,50" fill="#fff" opacity="0.7"/>
+              <polygon points="34,32 38,20 42,32" fill="#9fb8c8"/>
+            </svg>
+          </div>
+          <div class="resort-body">
+            <span class="resort-badge">Slopeside</span>
+            <h3>Acme Alpine Lodge</h3>
+            <p class="resort-vibe">Slopeside fireplaces, hot cocoa bars, and gondola views for miles.</p>
+            <p class="resort-rooms">Standard &middot; Suite &middot; Villa</p>
+            <p class="resort-rate">From $289/night</p>
+            <button class="btn btn-mini" type="button" data-open-sam>Check availability</button>
+          </div>
+        </article>
+
+        <article class="resort-card resort-studios">
+          <div class="resort-art" aria-hidden="true">
+            <svg viewBox="0 0 120 60" width="100%" height="100%">
+              <rect x="25" y="18" width="70" height="30" rx="4" fill="#fff" opacity="0.85"/>
+              <polygon points="25,18 95,18 85,8 35,8" fill="#fff" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="resort-body">
+            <span class="resort-badge">Backlot</span>
+            <h3>Acme Studios Hotel</h3>
+            <p class="resort-vibe">Backlot tours, soundstage suites, and a marquee over every hallway.</p>
+            <p class="resort-rooms">Standard &middot; Suite &middot; Villa</p>
+            <p class="resort-rate">From $289/night</p>
+            <button class="btn btn-mini" type="button" data-open-sam>Check availability</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="acme-plus" class="acme-plus">
+      <div class="acme-plus-copy">
+        <span class="ticket-tag">Included with every stay</span>
+        <h2>30 days of Acme+ streaming, on the house</h2>
+        <p>
+          Every confirmed booking includes 30 days of Acme+ streaming — movies and shows in
+          your room and on your own devices at home, no extra charge. Sam can set it up the
+          moment your stay is confirmed.
+        </p>
+        <button class="btn btn-primary" type="button" data-open-sam>Ask Sam about Acme+</button>
+      </div>
+      <div class="acme-plus-art" aria-hidden="true">
+        <svg viewBox="0 0 220 140" width="100%" height="100%">
+          <defs>
+            <linearGradient id="ticketGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff5da2"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="14" width="200" height="112" rx="14" fill="url(#ticketGrad)"/>
+          <circle cx="10" cy="70" r="10" fill="var(--paper-soft)"/>
+          <circle cx="210" cy="70" r="10" fill="var(--paper-soft)"/>
+          <line x1="150" y1="24" x2="150" y2="116" stroke="#fff" stroke-width="2" stroke-dasharray="4 5" opacity="0.7"/>
+          <polygon points="70,52 70,88 100,70" fill="#fff"/>
+          <text x="168" y="60" fill="#fff" font-size="13" font-weight="700" text-anchor="middle" font-family="'Baloo 2', sans-serif">30</text>
+          <text x="168" y="78" fill="#fff" font-size="9" text-anchor="middle" font-family="'Quicksand', sans-serif">DAYS</text>
+          <text x="168" y="96" fill="#fff" font-size="9" text-anchor="middle" font-family="'Quicksand', sans-serif">FREE</text>
+        </svg>
+      </div>
+    </section>
+
+    <section id="offers" class="offers">
+      <h2>Seasonal offers</h2>
+      <p class="section-sub">
+        Offers change with the season and your dates. Tell Sam when you're thinking of
+        traveling and they'll flag anything you qualify for.
+      </p>
+      <button class="btn btn-ghost" type="button" data-open-sam>Ask about current offers</button>
+    </section>
+
+    <section class="reviews">
+      <h2>Why guests love us</h2>
+      <div class="review-grid">
+        <blockquote class="review-card">
+          <p class="review-stars" aria-hidden="true">★★★★★</p>
+          <p>“Booked our Villa in about five minutes chatting with Sam. Didn't expect a hotel
+          bot to actually be that easy to deal with.”</p>
+          <cite>— Maria, Acme Coastal Resort</cite>
+        </blockquote>
+        <blockquote class="review-card">
+          <p class="review-stars" aria-hidden="true">★★★★★</p>
+          <p>“The Alpine Lodge fireplace suites are unreal in January. Already have the free
+          Acme+ month going on the drive home.”</p>
+          <cite>— James, Acme Alpine Lodge</cite>
+        </blockquote>
+        <blockquote class="review-card">
+          <p class="review-stars" aria-hidden="true">★★★★★</p>
+          <p>“Took the kids to the Magic Kingdom resort for a long weekend. Front desk chat
+          answered every question before we even got in the car.”</p>
+          <cite>— Linda, Acme Magic Kingdom Resort</cite>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="footer-wordmark">✦ Acme Resorts</span>
+        <p>Guest Services is here around the clock — chat with Sam or reach the guest
+        relations desk directly.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Guest relations</h3>
+        <p><a href="tel:+18005550142">1-800-555-0142</a></p>
+        <p><a href="mailto:guest-relations@acme-resorts.example">guest-relations@acme-resorts.example</a></p>
+      </div>
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <p><a href="#resorts">Resorts</a></p>
+        <p><a href="#acme-plus">Acme+</a></p>
+        <p><a href="#offers">Offers</a></p>
+      </div>
+    </div>
+    <p class="footer-fine">&copy; 2026 Acme Resorts. A fictional resort brand created for demo purposes.</p>
+  </footer>
+
+  <!-- Chat widget markup — unchanged from static/index.html; widget.js/widget.css
+       are included as-is and own all of the behavior below. -->
+  <div id="acme-bubble" class="acme-bubble" hidden>
+    Need help planning your visit?
+  </div>
+
+  <div id="acme-panel" class="acme-panel" hidden>
+    <div class="acme-panel-header">
+      <span>Acme Guest Services</span>
+      <button id="acme-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div id="acme-log" class="acme-log"></div>
+    <form id="acme-form" class="acme-form">
+      <input id="acme-input" type="text" autocomplete="off" placeholder="Ask about a visit...">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/static/widget.js"></script>
+  <script>
+    // Marketing-page glue only: every "open chat" control on this page
+    // (nav "Book now", hero/section CTAs) opens the SAME widget through
+    // the SAME code path the live site uses — a synthetic click on
+    // #acme-bubble, which is exactly what widget.js's own listener
+    // (`bubble.addEventListener("click", openPanel)`) already handles.
+    // Nothing here reimplements chat, session, or fetch logic.
+    //
+    // This page IS `/`, so app.py's index route has already minted the
+    // acme_widget auth cookie in the response that delivered it. No
+    // warm-up fetch is needed (an earlier revision was served from
+    // /static/mock/ and had to fetch `/` first for the cookie).
+    (function () {
+      "use strict";
+      var bubble = document.getElementById("acme-bubble");
+      document.querySelectorAll("[data-open-sam]").forEach(function (el) {
+        el.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          bubble.click();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

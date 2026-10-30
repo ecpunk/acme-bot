@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+data/
+prompts/targets/
+__pycache__/
+*.pyc
+.pytest_cache/

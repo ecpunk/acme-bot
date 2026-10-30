@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acme Resorts</title>
+  <link rel="stylesheet" href="/static/widget.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Acme Resorts</h1>
+  </main>
+
+  <div id="acme-bubble" class="acme-bubble" hidden>
+    Need help planning your visit?
+  </div>
+
+  <div id="acme-panel" class="acme-panel" hidden>
+    <div class="acme-panel-header">
+      <span>Acme Guest Services</span>
+      <button id="acme-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div id="acme-log" class="acme-log"></div>
+    <form id="acme-form" class="acme-form">
+      <input id="acme-input" type="text" autocomplete="off" placeholder="Ask about a visit...">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/static/widget.js"></script>
+</body>
+</html>
